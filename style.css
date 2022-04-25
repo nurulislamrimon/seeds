@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+
+
+html {
+    font-size: 16px;
+}
+
+:root {
+    --nav-color: #777E90;
+    --para-color: #777E90;
+    --btn-color: #45B26B;
+}
+
+/* common classes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav li {
+    list-style: none;
+}
+
+button,
+a {
+    cursor: pointer;
+}
+
+/* header section */
+header img {
+    display: none;
+}
+
+nav {
+    width: 80%;
+    display: flex;
+    margin-left: auto;
+    justify-content: space-evenly;
+    padding: 38px 0;
+}
+
+nav li a {
+    text-decoration: none;
+    color: var(--nav-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+nav li:last-child a {
+    color: var(--btn-color);
+    border: solid 1px var(--btn-color);
+    border-radius: 90px;
+    padding: 10px 20px;
+}
+
+/* top section */
+.top-section {
+    width: 90%;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.top-section .mokeup-container {
+    width: 100%;
+    background: linear-gradient(to left, #45B26B, white, white);
+}
+
+.top-section .mokeup-container img {
+    width: 100%;
+}
+
+.top-section article h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.top-section article p {
+    font-family: 'Roboto', sans-serif;
+    color: var(--para-color);
+    margin: 2rem 0;
+}
+
+.top-section article button:first-of-type {
+    color: white;
+    background-color: var(--btn-color);
+    padding: 10px 20px;
+    border: 1px solid var(--btn-color);
+    border-radius: 90px;
+}
+
+.top-section article button:last-child {
+    color: var(--btn-color);
+    background-color: transparent;
+    padding: 10px 20px;
+    border: unset;
+    border: solid 1px var(--btn-color);
+    border-radius: 90px;
+}
+
+/* ==========Mobile============== */
+@media screen and (max-width:760px) {
+
+    header {
+        width: 55%;
+        padding-right: 5%;
+        padding-top: 5%;
+        margin-left: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header img {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        left: 0;
+        background-color: white;
+    }
+
+    nav img {
+        position: absolute;
+        right: 5%;
+        top: 20px;
+    }
+
+    .top-section {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .top-section article {
+        padding: 5%;
+    }
+
+    .top-section .mokeup-container {
+        width: 100%;
+        background: linear-gradient(to top, #45B26B, white, white);
+    }
+
+    .full-nav {
+        display: flex;
+    }
+}
